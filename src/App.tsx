@@ -2,9 +2,12 @@ import './App.css'
 import { useMutation, useQuery } from '@apollo/client'
 import { FIND, UPDATE } from './graphql/demo'
 import { useState } from 'react'
-import { Button, Form, Input } from 'antd-mobile';
+import { Button, Form, ImageUploader, Input } from 'antd-mobile';
+import { useUploadOSS } from './hooks/useUploadOSS';
+
 
 function App() {
+  const {uploadHandler} =  useUploadOSS()
   const [name, setName] = useState('');
   const [desc,setDesc] = useState('')
   
@@ -43,7 +46,10 @@ function App() {
 }
 
 
-  return (<div><p>data:{JSON.stringify(data)}</p>
+  return (<div>
+    <ImageUploader upload={uploadHandler}/>
+    
+    <p>data:{JSON.stringify(data)}</p>
     <p>loading:{`${loading}`}</p>
     
     {/* <p>
