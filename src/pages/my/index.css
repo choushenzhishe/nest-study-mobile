@@ -1,0 +1,187 @@
+.my-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.my-content {
+  padding: 16px;
+  padding-top: 0;
+}
+
+.avatar-card {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.avatar-section .adm-avatar {
+  margin-bottom: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-upload {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.upload-button {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.upload-button:active {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0.98);
+}
+
+.form-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-card .adm-form {
+  padding: 0;
+}
+
+.form-card .adm-form-item {
+  margin-bottom: 0;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px;
+}
+
+.form-card .adm-form-item:last-child {
+  border-bottom: none;
+}
+
+.form-card .adm-form-item-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.form-card .adm-input {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 15px;
+}
+
+.form-card .adm-input:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.form-card .adm-input[disabled] {
+  background: transparent;
+  color: #999 !important;
+}
+
+.form-card .adm-form-footer {
+  padding: 20px 16px;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+}
+
+.form-card .adm-button {
+  border-radius: 8px;
+  font-weight: 500;
+  height: 48px;
+}
+
+/* NavBar 样式 */
+.adm-nav-bar {
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.adm-nav-bar-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* ImageUploader 样式 */
+.adm-image-uploader {
+  width: 100%;
+}
+
+.adm-image-uploader-cell {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.adm-image-uploader-cell-add {
+  background: transparent;
+  border: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .my-content {
+    padding: 12px;
+    padding-top: 0;
+  }
+  
+  .avatar-section {
+    padding: 20px 12px;
+  }
+  
+  .form-card .adm-form-item {
+    padding: 14px;
+  }
+  
+  .form-card .adm-form-footer {
+    padding: 16px 12px;
+  }
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .my-container {
+    background-color: #1a1a1a;
+  }
+  
+  .form-card {
+    background: #2a2a2a;
+  }
+  
+  .form-card .adm-form-item {
+    border-bottom-color: #333;
+  }
+  
+  .form-card .adm-form-item-label {
+    color: #fff;
+  }
+  
+  .form-card .adm-input {
+    color: #fff;
+  }
+  
+  .adm-nav-bar {
+    background: #2a2a2a;
+    border-bottom-color: #333;
+  }
+}
